@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            text-align: center;
         }
 
         h1 {
@@ -62,6 +64,7 @@
             margin-top: 10px;
         }
 
+        /* Floating messages */
         .floating-message {
             position: absolute;
             top: 10%;
@@ -71,7 +74,6 @@
             border-radius: 10px;
             font-size: 1.5em;
             animation: fadeInMessage 2s forwards;
-            opacity: 0;
         }
 
         @keyframes fadeInMessage {
@@ -88,7 +90,10 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             margin-top: 30px;
-            text-align: center;
+        }
+
+        .book:hover {
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
         }
 
         .book-content {
@@ -98,64 +103,10 @@
             margin-top: 20px;
             animation: fadeInMessage 2s forwards;
         }
-
-        /* Modal Styling */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .modal img {
-            max-width: 500px;
-            max-height: 400px;
-            border-radius: 10px;
-        }
-
-        .modal-close {
-            background-color: red;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
     <h1>Happy Birthday Kashvi</h1>
-
-    <!-- Interactive Album -->
-    <div class="album-container">
-        <div class="interactive-album" onclick="openAlbum('https://imgur.com/H5QKXmL', 'You were such a cute little chotuuu... abhi bhi same hei hai.')">
-            <img src="https://imgur.com/H5QKXmL" alt="Cute Little Chotuuu">
-            <div class="album-message">"You were such a cute little chotuuu... abhi bhi same hei hai."</div>
-        </div>
-
-        <div class="interactive-album" onclick="openAlbum('https://imgur.com/c4SZTya', 'Beautiful... elegant... so matureee.')">
-            <img src="https://imgur.com/c4SZTya" alt="Elegant and Mature">
-            <div class="album-message">"Beautiful... elegant... so matureee."</div>
-        </div>
-
-        <div class="interactive-album" onclick="openAlbum('https://imgur.com/MnkH5t3', 'No comments...')">
-            <img src="https://imgur.com/MnkH5t3" alt="No Comments">
-            <div class="album-message">"No comments..."</div>
-        </div>
-    </div>
 
     <!-- Floating Messages -->
     <div class="floating-message" style="animation-delay: 0s;">Happiestttt SEVENTEENTH BIRTHDAYYY KASHVII!</div>
@@ -163,6 +114,24 @@
     <div class="floating-message" style="animation-delay: 2s;">You make the world a better place just by being in it.</div>
     <div class="floating-message" style="animation-delay: 3s;">Never stop being the incredible person you are!</div>
     <div class="floating-message" style="animation-delay: 4s;">Let your heart be full of happiness, just like you make others feel.</div>
+
+    <!-- Interactive Album -->
+    <div class="album-container">
+        <div class="interactive-album" onclick="openAlbum()">
+            <img src="https://imgur.com/H5QKXmL" alt="Cute Little Chotuuu">
+            <div class="album-message">"You were such a cute little chotuuu... abhi bhi same hei hai."</div>
+        </div>
+
+        <div class="interactive-album" onclick="openAlbum()">
+            <img src="https://imgur.com/c4SZTya" alt="Elegant and Mature">
+            <div class="album-message">"Beautiful... elegant... so matureee."</div>
+        </div>
+
+        <div class="interactive-album" onclick="openAlbum()">
+            <img src="https://imgur.com/MnkH5t3" alt="No Comments">
+            <div class="album-message">"No comments..."</div>
+        </div>
+    </div>
 
     <!-- Book with Tappable Messages -->
     <div class="book" onclick="toggleBookContent()">
@@ -173,31 +142,10 @@
         <p>"May all your dreams shine as brightly as you do!"</p>
     </div>
 
-    <!-- Modal for images -->
-    <div class="modal" id="imageModal">
-        <div class="modal-content">
-            <img id="modalImage" src="" alt="Image">
-            <p id="modalMessage"></p>
-            <button class="modal-close" onclick="closeModal()">Close</button>
-        </div>
-    </div>
-
     <script>
         // Function to open album content (interactive)
-        function openAlbum(imageSrc, message) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            const modalMessage = document.getElementById('modalMessage');
-
-            modalImage.src = imageSrc;
-            modalMessage.textContent = message;
-            modal.style.display = 'flex';
-        }
-
-        // Function to close the modal
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
+        function openAlbum() {
+            alert("This would open the full photo and message.");
         }
 
         // Function to toggle book content
