@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Kashvi</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4e1d2;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 30px;
+      color: #8b4c39;
+      font-size: 2.5em;
+    }
+
+    .album-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 30px 20px;
+    }
+
+    .interactive-album {
+      width: 300px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .interactive-album img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .album-message {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .floating-message {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      animation: float 6s infinite;
+      z-index: 10;
+    }
+
+    @keyframes float {
+      0% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -20px); }
+      100% { transform: translate(-50%, 0); }
+    }
+
+    .book {
+      width: 250px;
+      height: auto;
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 30px auto;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .book-content {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #5a3b2d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9em;
+      color: #7a4b3e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday Kashvi</h1>
+
+  <div class="floating-message">Happiestttt SEVENTEENTH BIRTHDAYYY KASHVII!</div>
+
+  <!-- Album Section -->
+  <div class="album-wrapper">
+    <div class="interactive-album">
+      <img src="https://i.imgur.com/H5QKXmL.jpg" alt="Cute Chotu">
+      <div class="album-message">You were such a cute little chotuuu... abhi bhi same hei hai.</div>
+    </div>
+    <div class="interactive-album">
+      <img src="https://i.imgur.com/c4SZTya.jpg" alt="Elegant and Mature">
+      <div class="album-message">Beautiful... elegant... so matureee.</div>
+    </div>
+    <div class="interactive-album">
+      <img src="https://i.imgur.com/MnkH5t3.jpg" alt="No Comments">
+      <div class="album-message">No comments...</div>
+    </div>
+  </div>
+
+  <!-- Book Message -->
+  <div class="book" onclick="toggleBookContent()">
+    <h3>Tap to Open Your Messages!</h3>
+    <div class="book-content" id="bookContent">
+      <p>You are so strong but you can be soft too.</p>
+      <p>You can be cute whenever you want to.</p>
+      <p>You shine brighter in everyone's life... sometimes more than the sun itself.</p>
+      <p>You are theee strongest personnn and I am proud of youuu.</p>
+      <p>You are kind and sweet just like the moonlight's breeze on summer nights.</p>
+    </div>
+  </div>
+
+  <footer>
+    Made with care for someone special.
+  </footer>
+
+  <script>
+    function toggleBookContent() {
+      const content = document.getElementById("bookContent");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
