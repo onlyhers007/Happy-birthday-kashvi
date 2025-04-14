@@ -1,158 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Kashvi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            font-style: italic;
-            background-color: #f4e1d2;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Kashvi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-style: italic;
+      background-color: #f4e1d2;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 2.5em;
-        }
+    h1 {
+      color: #8b4c39;
+      text-align: center;
+      font-size: 2em;
+      margin: 20px 10px 10px;
+    }
 
-        .album-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-            width: 100%;
-            max-width: 1000px;
-        }
+    .floating-message-container {
+      margin: 10px 20px;
+    }
 
-        .interactive-album {
-            width: 280px;
-            height: 200px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-            margin: 10px;
-        }
+    .floating-message {
+      background-color: rgba(255, 255, 255, 0.6);
+      color: #5a3b2d;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 1em;
+      margin: 10px 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
 
-        .interactive-album img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-        .album-message {
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+    .album-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 10px;
+    }
 
-        /* Floating messages */
-        .floating-message {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            background-color: rgba(255, 255, 255, 0.6);
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 1.5em;
-            animation: fadeInMessage 2s forwards;
-        }
+    .interactive-album {
+      width: 90%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
 
-        @keyframes fadeInMessage {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+    .interactive-album img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-        .book {
-            width: 250px;
-            height: 350px;
-            background-color: #fff;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            margin-top: 30px;
-        }
+    .album-message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
 
-        .book:hover {
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-        }
+    .book {
+      background-color: #fff;
+      margin: 30px auto 20px;
+      padding: 20px;
+      width: 85%;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      cursor: pointer;
+    }
 
-        .book-content {
-            display: none;
-            font-size: 1.2em;
-            text-align: center;
-            margin-top: 20px;
-            animation: fadeInMessage 2s forwards;
-        }
-    </style>
+    .book-content {
+      display: none;
+      margin-top: 15px;
+      color: #5a3b2d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #7a4b3e;
+    }
+  </style>
 </head>
 <body>
-    <h1>Happy Birthday Kashvi</h1>
+  <h1>Happy Birthday Kashvi</h1>
 
-    <!-- Floating Messages -->
-    <div class="floating-message" style="animation-delay: 0s;">Happiestttt SEVENTEENTH BIRTHDAYYY KASHVII!</div>
-    <div class="floating-message" style="animation-delay: 1s;">Enjoy every moment today, you deserve the best!</div>
-    <div class="floating-message" style="animation-delay: 2s;">You make the world a better place just by being in it.</div>
-    <div class="floating-message" style="animation-delay: 3s;">Never stop being the incredible person you are!</div>
-    <div class="floating-message" style="animation-delay: 4s;">Let your heart be full of happiness, just like you make others feel.</div>
+  <div class="floating-message-container">
+    <div class="floating-message">Happiestttt SEVENTEENTH BIRTHDAYYY KASHVII!</div>
+    <div class="floating-message">Enjoy every moment today, you deserve the best!</div>
+    <div class="floating-message">You make the world a better place just by being in it.</div>
+    <div class="floating-message">Never stop being the incredible person you are!</div>
+    <div class="floating-message">Let your heart be full of happiness, just like you make others feel.</div>
+  </div>
 
-    <!-- Interactive Album -->
-    <div class="album-container">
-        <div class="interactive-album" onclick="openAlbum()">
-            <img src="https://imgur.com/H5QKXmL" alt="Cute Little Chotuuu">
-            <div class="album-message">"You were such a cute little chotuuu... abhi bhi same hei hai."</div>
-        </div>
-
-        <div class="interactive-album" onclick="openAlbum()">
-            <img src="https://imgur.com/c4SZTya" alt="Elegant and Mature">
-            <div class="album-message">"Beautiful... elegant... so matureee."</div>
-        </div>
-
-        <div class="interactive-album" onclick="openAlbum()">
-            <img src="https://imgur.com/MnkH5t3" alt="No Comments">
-            <div class="album-message">"No comments..."</div>
-        </div>
+  <div class="album-container">
+    <div class="interactive-album">
+      <img src="https://i.imgur.com/H5QKXmL.jpg" alt="Cute Little Chotuuu">
+      <div class="album-message">You were such a cute little chotuuu... abhi bhi same hei hai.</div>
     </div>
-
-    <!-- Book with Tappable Messages -->
-    <div class="book" onclick="toggleBookContent()">
-        <h3>Tap to Open Your Messages!</h3>
+    <div class="interactive-album">
+      <img src="https://i.imgur.com/c4SZTya.jpg" alt="Elegant and Mature">
+      <div class="album-message">Beautiful... elegant... so matureee.</div>
     </div>
+    <div class="interactive-album">
+      <img src="https://i.imgur.com/MnkH5t3.jpg" alt="No Comments">
+      <div class="album-message">No comments...</div>
+    </div>
+  </div>
+
+  <div class="book" onclick="toggleBookContent()">
+    <h3>Tap to Open Your Messages!</h3>
     <div class="book-content" id="bookContent">
-        <p>"Ikk things have been hard for you but tu itni strongg rhi hai na i am sooo proud of you dumbassss..i hopeee this year you can do whatever u want to nd enjoy kr paye sab chizeee.."</p>
+      <p>Ikk things have been hard for you but tu itni strongg rhi hai na i am sooo proud of you dumbassss..</p>
+      <p>I hopeee this year you can do whatever u want to nd enjoy kr paye sab chizeee..</p>
     </div>
+  </div>
 
-    <script>
-        // Function to open album content (interactive)
-        function openAlbum() {
-            alert("This would open the full photo and message.");
-        }
+  <footer>
+    Made with care for someone special.
+  </footer>
 
-        // Function to toggle book content
-        function toggleBookContent() {
-            const content = document.getElementById("bookContent");
-            content.style.display = content.style.display === "block" ? "none" : "block";
-        }
-    </script>
+  <script>
+    function toggleBookContent() {
+      const content = document.getElementById("bookContent");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
     </html>
