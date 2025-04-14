@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Kashvi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4e1d2;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2.5em;
+        }
+
+        .interactive-album {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .interactive-album img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .album-message {
+            font-size: 1.1em;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .floating-message {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            animation: floatMessage 5s infinite alternate;
+        }
+
+        @keyframes floatMessage {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+
+        .message-container {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .book {
+            width: 250px;
+            height: 350px;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .book:hover {
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .book-content {
+            display: none;
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Rotating Floating Messages */
+        .floating-container {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            text-align: center;
+            animation: rotateMessage 12s infinite alternate;
+        }
+
+        @keyframes rotateMessage {
+            0% { opacity: 1; }
+            25% { opacity: 0; }
+            50% { opacity: 1; }
+            75% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday Kashvi</h1>
+
+    <!-- Interactive Album -->
+    <div class="interactive-album" onclick="openAlbum()">
+        <img src="https://imgur.com/H5QKXmL" alt="Cute Little Chotuuu">
+        <div class="album-message">"You were such a cute little chotuuu... abhi bhi same hei hai."</div>
+    </div>
+
+    <div class="interactive-album" onclick="openAlbum()">
+        <img src="https://imgur.com/c4SZTya" alt="Elegant and Mature">
+        <div class="album-message">"Beautiful... elegant... so matureee."</div>
+    </div>
+
+    <div class="interactive-album" onclick="openAlbum()">
+        <img src="https://imgur.com/MnkH5t3" alt="No Comments">
+        <div class="album-message">"No comments..."</div>
+    </div>
+
+    <!-- Floating Messages -->
+    <div class="floating-message">Happiestttt SEVENTEENTH BIRTHDAYYY KASHVII!</div>
+    <div class="floating-message" style="animation-delay: 1s;">Enjoy every moment today, you deserve the best!</div>
+    <div class="floating-message" style="animation-delay: 2s;">You make the world a better place just by being in it.</div>
+    <div class="floating-message" style="animation-delay: 3s;">Never stop being the incredible person you are!</div>
+    <div class="floating-message" style="animation-delay: 4s;">Let your heart be full of happiness, just like you make others feel.</div>
+
+    <!-- Book with Tappable Messages -->
+    <div class="book" onclick="toggleBookContent()">
+        <h3>Tap to Open Your Messages!</h3>
+    </div>
+    <div class="book-content" id="bookContent">
+        <p>"Wishing you endless smiles and laughter today and always!"</p>
+        <p>"May all your dreams shine as brightly as you do!"</p>
+    </div>
+
+    <script>
+        // Function to open album content (interactive)
+        function openAlbum() {
+            alert("This would open the full photo and message.");
+        }
+
+        // Function to toggle book content
+        function toggleBookContent() {
+            const content = document.getElementById("bookContent");
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
